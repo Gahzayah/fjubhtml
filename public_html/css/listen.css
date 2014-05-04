@@ -1,0 +1,57 @@
+/*  Listen.css
+*	
+*	Eigeschaften zur Liste ul (ol doesnt supported)
+*	@Autor Martin Hinrichs
+*/
+
+
+ul {
+list-style-type: disc;
+display: block;
+margin:0;
+padding-left:3em;
+padding-right: 0;
+padding-top: 0.4em;
+padding-bottom: 0;
+}
+li {
+margin-left: 0;
+margin-right: 0;
+margin-top: 0.05em;
+margin-bottom: 0.05em;
+padding-left:0;
+padding-right: 0;
+padding-top: 0;
+padding-bottom: 0;
+}
+
+table {  
+width:100%;
+border:1px solid #c2c2c2; 
+padding:0;   
+border-collapse: separate; 
+border-radius:0.2em; 
+margin: 0.4em 0 0 0;
+border-spacing:0
+}
+td, th  { 
+vertical-align: middle; 
+margin:0;
+padding:0.2em 0.5em;
+text-align:left; 
+}
+td + td, th + th {
+border-left:1px solid #c2c2c2
+}
+th, tr td  {
+border-bottom:1px solid #c2c2c2; 
+}
+thead{background-color:#deffff;text-transform:uppercase;font-size:0.875em;color:#292929}
+td:first-child {border-left:none}
+td:last-child {border-right:none}
+thead +tr td,tr+ tr td,tfoot td{border-top:none;}
+th:first-child { -webkit-border-radius:0.2em 0 0 0; border-left:none}
+th:last-child{ -webkit-border-radius:0 0.2em 0 0;border-right:none }
+tfoot td {border-bottom:none}
+tfoot td:first-child{  -webkit-border-radius:0 0 0 0.2em ;}
+tfoot td:last-child{  -webkit-border-radius:0 0 0.2em 0;}

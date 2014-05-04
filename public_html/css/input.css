@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01.05.2014, 21:55:32
+    Author     : MaHi
+*/
+
+/*
+* Label for decalare Input Fields
+*/
+form > label {
+   margin: 0em 0.4em; 
+}
+/*
+* Div conept only for Upload
+*/
+input {
+margin:1em 0.3em;
+height: 2em;
+padding: 0 0.5em;
+font-weight: bold;
+border: 1px solid #999;
+}
+input[value="Kommentar"] { 
+color: #c2c2c2; 
+}
+input[value="deine@email.de"] { 
+color: #c2c2c2; 
+}
+
+.upload-wrapper{
+    display: inline-block;
+    width: 115px;
+    height: 2em;
+    overflow: hidden;
+    position: relative;
+}
+.upload-wrapper:hover {
+    border-color: #2b81af;
+    background-color: #b4d100;
+}
+

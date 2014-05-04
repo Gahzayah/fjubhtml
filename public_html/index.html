@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+@autor: Martin Hinrichs
+-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-ui/1.10.2/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.iframe-transport.js" ></script>
+        <script type="text/javascript" src="js/libs/tmpl.min.js" ></script>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+
+        <div style="width:40% ;margin:0 auto">
+            <h2>Headline - Elements</h2>
+            <h1>Verdana H1</h1>
+            <p>Most pages of continuous prose pulse with a particular vertical rhythm, established by the lines of its main words, sentences, and paragraphs. If a subheading is set in a di?erent size than the rest of the main text, it needs to be o?set in a way that ?ows with the page’s intrinsic rhythm.</p>
+            <h2>Verdana H2</h2>
+            <p>Most pages of continuous prose pulse with a particular vertical rhythm, established by the lines of its main words, sentences, and paragraphs. If a subheading is set in a di?erent size than the rest of the main text, it needs to be o?set in a way that ?ows with the page’s intrinsic rhythm.</p>
+            <h3>Verdana H3</h3>
+            <p>Most pages of continuous prose pulse with a particular vertical rhythm, established by the lines of its main words, sentences, and paragraphs. If a subheading is set in a di?erent size than the rest of the main text, it needs to be o?set in a way that ?ows with the page’s intrinsic rhythm.</p>
+            <h4>Verdana H4</h4>
+            <p>Most pages of continuous prose pulse with a particular vertical rhythm, established by the lines of its main words, sentences, and paragraphs. If a subheading is set in a di?erent size than the rest of the main text, it needs to be o?set in a way that ?ows with the page’s intrinsic rhythm.</p>
+            <h5>Verdana H5</h5>
+            <p>Most pages of continuous prose pulse with a particular vertical rhythm, established by the lines of its main words, sentences, and paragraphs. If a subheading is set in a di?erent size than the rest of the main text, it needs to be o?set in a way that ?ows with the page’s intrinsic rhythm.</p>
+            <h6>Verdana H6</h6>
+            <p>Most pages of continuous prose pulse with a particular vertical rhythm, established by the lines of its main words, sentences, and paragraphs. If a subheading is set in a di?erent size than the rest of the main text, it needs to be o?set in a way that ?ows with the page’s intrinsic rhythm.</p>
+            <h2>HR-Element</h2>
+            <hr>
+            <h2>Listen-Element ul</h2>
+            <ul>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ul>
+            <h2>Tabelle</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Januar</th>
+                        <th>Februar</th>
+                        <th>März</th>
+                        <th>April</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>Mike</td>
+                        <td>Peter</td>
+                        <td>Lucia</td>
+                        <td>Anne</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Mike</td>
+                        <td>Peter</td>
+                        <td>Lucia</td>
+                        <td>Anne</td>
+                    </tr>
+                    <tr>
+                        <td>Sieger</td>
+                        <td>Verlierer</td>
+                        <td>Verlierer</td>
+                        <td>Verlierer</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="warning">Vorsicht , sind dabei von der Kante zu stürzen</p>
+            <p class="validate">Sie haben erfolgreich ihre Kredikarten-Daten übertragen</p>
+            <p class="error">Der Server ist abgestürzt und vorrübergehend nicht zu erreichen</p>
+            <h2>Input Typen</h2>
+            <div class="inputblock">
+                <br>
+                <label for="anmeldung">Füllen sie die Email ab und Schreiben einen Kommentar!</label>
+                <form name="anmeldung" action="test.json">
+                    <input type="email" name="email" value="deine@email.de">
+                    <input type="text" name="text" value="Kommentar">
+                    <input type="submit" class="button" formaction="test.json" formmethod="GET" value="OK" style="display: inline"><input class="button" style="display: inline" type="submit" formmethod="POST" formaction="test.json" formtarget="_blank" value="NewTab">
+                </form> 
+                <br>
+                <label>File-Upload</label>
+                <br>
+                <form action="http://localhost:8084/Sandbox/upload" enctype="multipart/form-data" method="Post">
+                    <input type="file" class="jfilestyle" data-iconName="icon-plus" data-theme="orange" data-input="false" data-buttonText="+hinzufügen">            
+                    <input type="button" name="add" value="+Bilder hinzufügen">
+                    <input  type="submit" name="upload" value="Upload">
+                    <input type="button" name="cancel" value="Abbrechen">
+                </form>    
+                
+                <%-- Using JSP EL to get message attribute value from request scope --%>
+        <h2>${requestScope.message}</h2>
+               
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        </div>
+    </body>
+</html>
