@@ -5,10 +5,10 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/base.css">
-        <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/libs/jquery-ui/1.10.2/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="js/libs/jquery.iframe-transport.js" ></script>
-        <script type="text/javascript" src="js/libs/tmpl.min.js" ></script>
+        <script type="text/javascript" src="js/lib/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery-ui/1.10.2/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.iframe-transport.js" ></script>
+        <script type="text/javascript" src="js/lib/tmpl.min.js" ></script>
 
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     </head>
@@ -88,11 +88,9 @@
                 <br>
                 <label>File-Upload</label>
                 <br>
-                <form action="http://localhost:8084/Sandbox/upload" enctype="multipart/form-data" method="Post">
+                <form action="http://localhost:8084/Sandbox/UploadServlet" enctype="multipart/form-data" method="Post">
                     <input type="file" class="jfilestyle" data-iconName="icon-plus" data-theme="orange" data-input="false" data-buttonText="+hinzufügen">            
-                    <input type="button" name="add" value="+Bilder hinzufügen">
                     <input  type="submit" name="upload" value="Upload">
-                    <input type="button" name="cancel" value="Abbrechen">
                 </form>    
                 
                 <%-- Using JSP EL to get message attribute value from request scope --%>
