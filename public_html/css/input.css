@@ -24,22 +24,20 @@ padding: 0 0.5em;
 font-weight: bold;
 border: 1px solid #999;
 }
-input[value="Kommentar"] { 
-color: #c2c2c2; 
+
+/*
+*   Upload-Form
+*/
+
+#upload {
+    width:350px;
 }
-input[value="deine@email.de"] { 
-color: #c2c2c2; 
+#upload input[type=button] {
+    width:100px;
 }
 
-.upload-wrapper{
-    display: inline-block;
-    width: 115px;
-    height: 2em;
-    overflow: hidden;
-    position: relative;
+#upload i{
+   padding: 0 10px;
 }
-.upload-wrapper:hover {
-    border-color: #2b81af;
-    background-color: #b4d100;
-}
+
 
