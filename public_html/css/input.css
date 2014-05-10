@@ -29,8 +29,21 @@ border: 1px solid #999;
 *   Upload-Form
 */
 
+form  span {
+    width: 350px;
+    display:inline-block;
+}
+form code {
+    font-family: verdana;
+    float:right;
+}
+
+form p {
+
+}
+
 #upload {
-    width:350px;
+    width:550px;
 }
 #upload input[type=button] {
     width:100px;

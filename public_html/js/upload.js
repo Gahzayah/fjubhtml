@@ -2,6 +2,7 @@ var form                   = '#upload';                       // Define the FORM
 var uploadButton           = "input[type='button']";          // Define the tpye of <input type=button.
 var inputFile              = "input[type='file']";            // Define the type of <input type=file 
 var selectedOutput         = '#upload div';                    // Define the Output of <ul>
+var counter = 0;
 
 
 $(function() {
@@ -18,14 +19,25 @@ $(function() {
         
     }).bind('fileuploadadd', function (e, data) {
         
-        var tpl = $('<p><i class="icon icon-picture"></i><span></span></p>');
+        var tpl = $('<p><i class="fa fa-picture-o"></i><span></span><a href=""><i class="fa fa-times-circle"></i></a></p>');
 
         // Append the file name and file size
         tpl.find('span').text(data.files[0].name)
-                     .append('<i>' + formatFileSize(data.files[0].size) + '</i>');
+                     .append('<code>' + formatFileSize(data.files[0].size) + '</code>');
 
-        // Add the HTML to the UL element
+        // Add the HTML to the P element
         data.context = tpl.appendTo(selectedOutput);
+        
+        tpl.find('a').click(function(){
+                
+            tpl.fadeOut(function(){
+                tpl.find('p').remove();
+            });
+            
+        });
+        
+        counter = counter + 1;
+
             
     });;
 
