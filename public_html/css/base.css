@@ -20,7 +20,9 @@ margin:0.4em 0 0 0;
 height:1.3em;
 padding:0;
 }
-
+i{
+padding: 0 0.5em 0 0.3em;
+}
 /* Floating	*/
 .right {
 float: left;
@@ -30,4 +32,7 @@ float: right;
 }
 .clear{
 clear:both;
+}
+.borderclear {
+ margin: 1px     
 }

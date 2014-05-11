@@ -30,27 +30,29 @@ border: 1px solid #999;
 */
 
 form  span {
-    width: 350px;
+    font-family: verdana;
     display:inline-block;
 }
-form code {
+.filesize {
     font-family: verdana;
-    float:right;
+    text-align: right;
+    float: right;
 }
 
-form p {
+.filename {
+    
+}
 
+form .prevUpload {
+    font-size: 1em;
+}
+form .prevUpload m1em {
+    margin: 1em
 }
 
 #upload {
     width:550px;
 }
 #upload input[type=button] {
-    width:100px;
+
 }
-
-#upload i{
-   padding: 0 10px;
-}
-
-
