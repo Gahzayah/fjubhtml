@@ -8,21 +8,18 @@
   background: #fff6cc;
   border: 1px solid #F0DD87;
   background-size:16px 16px;
- // border-radius: 0.2em;
-  //padding: 4px 0px 4px 38px;
+  border-radius: 0.2em;
+
 }
 .validate {
   background: #CCFFD6;
   border: 1px solid #99FF80;
-    background-size:16px 16px;
-  //border-radius: 0.2em;
- // padding: 4px 0px 4px 38px;
+  border-radius: 0.2em;
+
 }
 .error {
   background: #FFABAB;
   border: 1px solid #FF8080;
-    
-  /* background-size:16px 16px; */
- // border-radius: 0.2em;
-  //padding: 4px 0px 4px 38px;
+  border-radius: 0.2em;
+
 }

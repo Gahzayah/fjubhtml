@@ -90,9 +90,10 @@
                 <br>
                 <label>File-Upload</label>
                 <br>
-                <form id="upload" enctype="multipart/form-data" method="Post"> 
-                    <input type="button" name="uploadButton" value="hinzufügen">
-                    <input type="file" name="inputFile" hidden multiple/>
+                <form id="upload" action="http://localhost:8084/Sandbox/databasetest" enctype="multipart/form-data" method="POST"> 
+                    <input type="button" name="add" value="add">
+                    <input type="hidden" name="upload" value="upload">
+                    <input type="file" name="files" hidden multiple/>
                     <div id="prevUpload">
                         <!-- The file uploads will be shown here -->
                     </div>

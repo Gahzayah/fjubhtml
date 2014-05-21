@@ -1,8 +1,10 @@
-var form = '#upload';                               // Define the FORM-Selector
-var uploadButton = "input[type='button']";          // Define the tpye of <input type=button.
-var inputFile = "input[type='file']";               // Define the type of <input type=file 
-var selectedOutput = '#upload #prevUpload';         // Define the Output of <ul>
-var filenameLength = 35;
+var form            = '#upload';                                // Define the FORM-Selector
+var btnAdd          = "input[name='add']";                      // Define the ADD-Button
+var btnFileType     = "input[name='files']";                    // Define the FILE-TYPE-Button
+var btnUpload       = "input[name='upload']";                   // Define the UPLOAD-Button
+var selectedOutput  = '#upload #prevUpload';                    // Define the Output of <ul>
+var filenameLength  = 35;
+var data_ = null;
 
 
 
@@ -11,14 +13,17 @@ $(function() {
      *  show the File Browser Dialog
      */
 
-    $(uploadButton).click(function() {
-        $(this).parent().find(inputFile).click();
+    $(btnAdd).click(function() {
+        $(this).parent().find(btnFileType).click();
     });
 
     $(form).fileupload({
+        url: '/path/to/upload/handler.json',
+        sequentialUploads: true,
+        
         add: function(e, data) {
             // e.preventDefault()       Keine Weiterleitung
-            
+            data_ = data;
             var filetype = data.files[0].type.split('/');
             var filename = checkFileName(data.files[0].name,filetype,filenameLength);
             var filesize = formatFileSize(data.files[0].size);
@@ -44,29 +49,45 @@ $(function() {
                 // Append the file name and file size
                 tpl.find('.filename').text(filename);
                 tpl.find('.filesize').append(filesize + '<a><i class="fa fa-times-circle"></i></a>');
-                // Add the HTML to the P element
-                data.context = tpl.appendTo(selectedOutput);
+                // Add the HTML to the DIV element
+                tpl.appendTo(selectedOutput);
 
-
+                $(btnUpload).prop('type', 'submit'); 
+                
                 tpl.find('a i').on("click", function() {
-                    tpl.remove();
+                   
+                   tpl.remove();
+                   if($(selectedOutput).children().length===0){
+                       $(btnUpload).prop('type', 'hidden');
+                   } 
                 });
-                
-                
-
             }
         }
-
-
     })
-
 });
 ;
+$(btnUpload).on('click',function(e){
+    e.preventDefault();
+    
+        alert("assa")
+        var formData = new FormData($(this)[0]);
+       $.ajax({
+            url: 'http://localhost:8084/Sandbox/databasetest',
+            type: "POST",
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function() {
+            alert( "success" );
+        }).fail(function() {
+            alert( "error" );
+        }).always(function() {
+            alert( "complete" );
+        });
 
-
-
-
-
+});
 
 function formatFileSize(bytes) {
     if (typeof bytes !== 'number') {
@@ -82,23 +103,6 @@ function formatFileSize(bytes) {
     return (bytes / 1000).toFixed(2) + ' KB';
 }
 
-function checkMimeType(filetype) {
-    var type = filetype.split('/');
-    
-    switch (type[0]) {
-
-        case 'text':        return type;break;
-        case 'image':       return type;break;
-        case 'video':       return type;break;
-        case 'audio':       return type;break;
-        case 'application': return type;break;
-        case 'multipart':   return type;break;
-        case 'model':       return type;break;
-        default:            return type;
-
-
-    }
-}
 
 function checkFileName(filename,filetype,length){   
     if (filename.length > length) {
