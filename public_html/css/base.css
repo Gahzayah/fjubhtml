@@ -1,28 +1,20 @@
+/*  Base.css
+*	
+*	Einbindung aller CSS-Files
+*	@Autor Martin Hinrichs
+*
+*       Content:
+*       o Importing CSS-Files
+*       o Floats & Clears
+*/
+
 @import url("typografie.css");
 @import url("listen.css");
 @import url("elements.css");
 @import url("tempframe.css");
 @import url("input.css");
-/*  base.css
-*	
-*	Main CSS Datei zum Einbinden in HTML
-*	@Autor Martin Hinrichs
-*/
+@import url("font-awesome-4.0.3/css/font-awesome.min.css");
 
-/*
-* Bruch-Element
-*/
-hr {
-display:block;
-background:#292929;
-border-radius: 0.2em;
-margin:0.4em 0 0 0;
-height:0.3em;
-padding:0;
-}
-i{
-padding: 0 0.5em 0 0.3em;
-}
 /* Floating	*/
 .right {
 float: left;
@@ -35,4 +27,8 @@ clear:both;
 }
 .borderclear {
  margin: 1px     
+}
+
+label {
+   margin: 0em 0.4em; 
 }

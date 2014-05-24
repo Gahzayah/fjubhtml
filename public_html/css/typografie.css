@@ -1,42 +1,56 @@
 /*  Typografie.css
 *	
-*	Eigeschaften zur Schrift ( Gr??e,Schriftart,Abstand..)
+*	Eigeschaften zur Schrift ( Größe,Schriftart,Abstand..)
 *	@Autor Martin Hinrichs
+*
+*       Content:
+*       o Main-Font / Second Level Font
+*       o Detail: h1-h6 , p
 */
 
-/* Implement Sans Serif Font */
-body{
-font-family: Verdana,lucida console,sans-serif;
-font-size:1em;
+/* -- Main-Font */
+body {
+    font-family: Verdana,lucida console,sans-serif;
+    font-size:1em;
 }
-p,table,ul {
-font-size: 0.875em;
+/* -- Second Level Font */
+p,table,ul,ol {
+    font-size: 0.875em;
 }
-/*	
-Headline Elements 
-*/
-h1,h2,h3,h4,h5,h6{
-color:#222;
-display:block;
-font-weight:bold;
-margin-top: 0.4em;
 
+/* -- Headline (H1-H6) */
+h1,h2,h3,h4,h5,h6 {
+    color:#222;
+    display:block;
+    font-weight:bold;
+    margin-top: 0.4em;
 }
-h1{font-size: 1.6667em;}	/* H1 Main Title Unique */
-h2{font-size: 1.5em;}
-h3{font-size: 1.3334em;}
-h4{font-size: 1.1667em;}
-h5{font-size: 1em;}
-h6{font-size: 0.9167em;}
-/* 
-Paragraph Element
-*/
-p{
-display:block;
-line-height: 1.1em;
-font-weight: normal;
-margin: 0.2em 0 0 0;
-padding:0;
+h1 {
+    font-size: 1.6667em;            /* H1 Main Title Unique */
+}	
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.3334em;
+}
+h4 {
+    font-size: 1.1667em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+    font-size: 0.9167em;
+}
+
+/* Paragraph ; */
+p {
+    display:block;
+    line-height: 1.1em;
+    font-weight: normal;
+    margin: 0.2em 0 0 0;
+    padding:0;
 }
 
 

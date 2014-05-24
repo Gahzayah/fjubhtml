@@ -1,25 +1,52 @@
-/*  elements.css
+/*  Elements.css
 *	
 *	Main CSS Datei zum Einbinden in HTML
 *	@Autor Martin Hinrichs
+*
+*       Content:
+*       o Horizontal Rule (hr)
+*       o Icon-Symbols (i)
+*       o Warning,Error,Validate Box
 */
 
-.warning{
-  background: #fff6cc;
-  border: 1px solid #F0DD87;
-  background-size:16px 16px;
-  border-radius: 0.2em;
 
+/* -- Horizontal Rule
+Task: defines a thematic break ;*/
+hr {
+    display:block;
+    background:#292929;
+    border-radius: 0.2em;
+    margin:0.4em 0 0 0;
+    height:0.3em;
+    padding:0;
 }
+
+/* -- Reserved for Font-Awesome
+Task: defines a icon-symbol ; */
+i {
+    padding: 0 0.5em 0 0.3em;
+}
+
+/* -- Warning-Box
+Task: defines a yellow warning Box ; */
+.warning {
+    background: #fff6cc;
+    border: 1px solid #F0DD87;
+    border-radius: 0.2em;
+}
+
+/* -- Validate-Box
+Task: defines a green validate Box ; */
 .validate {
-  background: #CCFFD6;
-  border: 1px solid #99FF80;
-  border-radius: 0.2em;
-
+    background: #CCFFD6;
+    border: 1px solid #99FF80;
+    border-radius: 0.2em;
 }
-.error {
-  background: #FFABAB;
-  border: 1px solid #FF8080;
-  border-radius: 0.2em;
 
+/* -- Error-Box
+Task: defines a red error Box ; */
+.error {
+    background: #FFABAB;
+    border: 1px solid #FF8080;
+    border-radius: 0.2em;
 }
