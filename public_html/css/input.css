@@ -42,6 +42,9 @@ input[type="button"], input[type="submit"], input[type="reset"] {
     transform: translateZ(0);
     font-size:0.9em;  
 }
+input[type="file"] {
+    display: none;
+}
 
 input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
     box-shadow:  0 0 0.05em 0.05em #003F7A, 0 0 1px rgba(0, 0, 0, 0);

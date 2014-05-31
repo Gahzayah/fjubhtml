@@ -89,11 +89,12 @@
                 <br>
                 <label>File-Upload</label>
                 <br>
-                <form id="upload" action="http://localhost:8084/Sandbox/databasetest" enctype="multipart/form-data" method="POST"> 
+                <form id="upload" enctype="multipart/form-data" method="POST"> 
                     <input type="button" name="add" value="add">
-                    <input type="hidden" name="upload" value="upload">
-                    <input type="submit" name="submit" value="submit">
-                    <input type="file" name="files" hidden multiple/>
+                    <input type="hidden" name="upload"  value="upload (Post)">
+                    <input type="hidden" name="uploadXhr" value="upload (XHR)">
+                    <input type="submit" name="xxx" value="submit">
+                    <input type="file" name="files" multiple/>
                     <div id="prevUpload">
                         <!-- The file uploads will be shown here -->
                     </div>
